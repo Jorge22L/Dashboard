@@ -10,3 +10,117 @@
     , url(../fonts/Poppins-Regular.ttf), url(../fonts/Poppins-SemiBold.ttf), url(../fonts/Poppins-SemiBoldItalic.ttf)
     , url(../fonts/Poppins-Thin.ttf), url(../fonts/Poppins-ThinItalic.ttf);
 }
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background: linear-gradient(#1e1e2f, #1e1e24);
+}
+
+button#boton-sidebar_left, 
+button#boton-sidebar_fixed
+{
+    display: none;
+}
+
+nav
+{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 35px 0px 20px;
+    position: absolute;
+    width: 100%;
+}
+
+.content
+{
+    padding: 80px 30px 30px 280px;
+}
+
+.main-panel
+{
+    border-top: 2px solid #97174d;
+    float: right;
+    min-height: 100vh;
+    transition: .2s;
+    width: 100%;
+}
+
+.navbar-bar
+{
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+
+.navbar-bar button
+{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.navbar-bar p
+{
+    color:#fff;
+    font-family: Poppins;
+    font-size: 14px;
+    margin-left: 20px;
+    opacity: 1;
+    text-transform: uppercase;
+    transition: .6s;
+}
+
+.navbar-bar i, .navbar-options i
+{
+    color: #fff;
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+.navbar-options
+{
+    align-items: center;
+    display: flex;
+}
+
+.navbar-options .photo
+{
+    border-radius: 50%;
+    height: 30px;
+    margin-left: 30px;
+    overflow: hidden;
+    width: 30px;
+}
+
+.photo img
+{
+    width: 100%;
+}
+
+.sidebar
+{
+    background: linear-gradient(#97174d, #ca3372);
+    border-radius: 5px;
+    height: calc(100vh - 90px);
+    margin-left: 20px;
+    margin-top: 80px;
+    position: fixed;
+    width: 230px;
+    z-index: 1024;
+}
+
+.wrapper
+{
+    height: 100vh;
+    position: relative;
+    top: 0;
+}
+
