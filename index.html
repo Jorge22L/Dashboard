@@ -5,13 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/Chart.min.css">
     <title>Dashboard Profesional</title>
 </head>
 <body>
 
     <div class="wrapper">
         <div class="sidebar">
-
+            <div class="sidebar-wrapper">
+                <div class="logo">
+                    <img src="images/logo.png" alt="">
+                    <span>Anónimos S.A.</span>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-box"></i>
+                                <span>prodcutos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-cash-register"></i>
+                                <span>Ventas</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Compras</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-user-tie"></i>
+                                <span>proveedores</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-users"></i>
+                                <span>Clientes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span>Ganancias</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <div class="main-panel">
@@ -35,9 +87,367 @@
             </nav>
 
             <div class="content" id="main">
-                <p>Este es mi contenido de gráficas</p>
+                <div class="grid-row">
+                    <div class="card card-chart">
+                        <div class="header-card_chart">
+                            <span>Total de usuarios</span>
+                            <h6>Mensualmente</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-area">
+                                <canvas id="myChart" class="chartjs-render-monitor" height="220"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-row_4">
+                    <div class="card">
+                        <div class="header-card">
+                            <div class="icon">
+                                <i class="far fa-user"></i>
+                            </div>
+                            <div>
+                                <span>Mensajes</span>
+                                <h6>180GB</h6>
+                            </div>
+                        </div>
+                        <div class="footer-card">
+                            <i class="far fa-comments"></i>
+                            <span>Actualizar</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="header-card">
+                            <div class="icon">
+                                <i class="far fa-hourglass"></i>
+                            </div>
+                            <div>
+                                <span>Mensajes</span>
+                                <h6>180GB</h6>
+                            </div>
+                        </div>
+                        <div class="footer-card">
+                            <i class="far fa-comments"></i>
+                            <span>Actualizar</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="header-card">
+                            <div class="icon">
+                                <i class="far fa-star"></i>
+                            </div>
+                            <div>
+                                <span>Mensajes</span>
+                                <h6>180GB</h6>
+                            </div>
+                        </div>
+                        <div class="footer-card">
+                            <i class="far fa-comments"></i>
+                            <span>Actualizar</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="header-card">
+                            <div class="icon">
+                                <i class="far fa-comments"></i>
+                            </div>
+                            <div>
+                                <span>Mensajes</span>
+                                <h6>180GB</h6>
+                            </div>
+                        </div>
+                        <div class="footer-card">
+                            <i class="far fa-comments"></i>
+                            <span>Actualizar</span>
+                        </div>
+                    </div>
+
+                </div><!-- Grid-row4-->
+
+                <div class="grid-row_charts">
+                    
+                    <div class="card-chart2 card">
+                        <div class="header-card_chart">
+                            <span>Total de seguidores</span>
+                            <h6>Mensualmente</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-area">
+                                <canvas id="myChart2" class="chartjs-render-monitor" height="220"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-chart3 card">
+                        <div class="header-card_chart">
+                            <span>Total de seguidores</span>
+                            <h6>Mensualmente</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-area">
+                                <canvas id="myChart3" class="chartjs-render-monitor" height="220"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-chart4 card">
+                        <div class="header-card_chart">
+                            <span>Total de seguidores</span>
+                            <h6>Mensualmente</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-area">
+                                <canvas id="myChart4" class="chartjs-render-monitor" height="220"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+    <script src="js/Chart.min.js"></script>
+    <script src="js/Chart.bundle.min.js"></script>
+    <script>
+
+        var ctx = document.getElementById('myChart').getContext('2d');
+        
+        var ctx2 = document.getElementById('myChart2').getContext('2d');
+        var ctx3 = document.getElementById('myChart3').getContext('2d')
+        var ctx4 = document.getElementById('myChart4').getContext('2d')
+
+        Chart.defaults.global.defaultFontFamily = "Poppins";
+        Chart.defaults.global.defaultFontSize = 12;
+        Chart.defaults.global.defaultFontColor = "#a8a8a8";
+
+        var myChart = new Chart(ctx, {
+            type:'line',
+            data: {
+                labels: ['HTML', 'CSS', 'JS','C#', 'PHP', 'GO', 'RJS','VJS'],
+                datasets:[{
+                    labels: 'los votos',
+                    data: [42, 39, 33, 46, 47, 25, 22, 24, 50, 54, 22],
+                    backgroundColor: [
+                        'transparent'
+                    ],
+                    borderColor: [
+                        '#31548F',
+                        '#31548F',
+                        '#31548F',
+                        '#31548F',
+                        '#31548F',
+                        '#31548F',
+                        '#31548F',
+                        '#31548F',
+                        '#31548F',
+                        '#31548F'
+                    ],
+                    borderWidth: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                legend: {display: false},
+                tooltips: {
+                    backgroundColor: '#fff',
+                    titleFontColor: '#4c4c4c',
+                    bodyFontColor: '#4c4c4c',
+                    enabled: true,
+                    modo: 'single',
+                    multiKeyBackroundColor: '#e1548f'
+                },
+                layout:{
+                    padding:{
+                        left:0,
+                        top:0,
+                        rigth:0,
+                        bottom:20
+                    }
+                },
+                sclaes:{
+                    xAxes: [{
+                        gridLines:{
+                            color:"rgba(225, 84,143, 0.1)"
+                        }
+                    }],
+                    yAxes: [{
+                        gridLines:{
+                            color:"rgba(225, 84,143, 0.1)"
+                        }
+                    }],
+                }
+            }
+        });
+
+        
+
+        var myChart2 = new Chart(ctx2, {
+            type:'line',
+            data: {
+                labels: ['JUL', 'AGO', 'SEP','OCT', 'NOV', 'DIC'],
+                datasets:[{
+                    labels: 'los votos',
+                    data: [42, 39, 33, 46, 47, 25],
+                    backgroundColor: [
+                        'transparent'
+                    ],
+                    borderColor: [
+                        '#31548F',
+                        '#31548F',
+                        '#31548F',
+                        '#31548F',
+                        '#31548F',
+                        '#31548F'
+                    ],
+                    borderWidth: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                legend: {display: false},
+                tooltips: {
+                    backgroundColor: '#fff',
+                    titleFontColor: '#4c4c4c',
+                    bodyFontColor: '#4c4c4c',
+                    enabled: true,
+                    modo: 'single',
+                    multiKeyBackroundColor: '#e1548f'
+                },
+                layout:{
+                    padding:{
+                        left:0,
+                        top:0,
+                        rigth:0,
+                        bottom:20
+                    }
+                },
+                sclaes:{
+                    xAxes: [{
+                        gridLines:{
+                            color:"rgba(225, 84,143, 0.1)"
+                        }
+                    }],
+                    yAxes: [{
+                        gridLines:{
+                            color:"rgba(225, 84,143, 0.1)"
+                        }
+                    }],
+                }
+            }
+        });
+
+        var myChart3 = new Chart(ctx3, {
+            type:'bar',
+            data: {
+                labels: ['BRA', 'NIC', 'USA','PER', 'FRA', 'ARG'],
+                datasets:[{
+                    labels: 'los votos',
+                    data: [42, 39, 33, 46, 47, 25],
+                    backgroundColor: [
+                        'transparent'
+                    ],
+                    borderColor: [
+                        '#0098f0',
+                        '#0098f0',
+                        '#0098f0',
+                        '#0098f0',
+                        '#0098f0',
+                        '#0098f0'
+                    ],
+                    borderWidth: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                legend: {display: false},
+                tooltips: {
+                    backgroundColor: '#fff',
+                    titleFontColor: '#4c4c4c',
+                    bodyFontColor: '#4c4c4c',
+                    enabled: true,
+                    modo: 'single',
+                    multiKeyBackroundColor: '#e1548f'
+                },
+                layout:{
+                    padding:{
+                        left:0,
+                        top:0,
+                        rigth:0,
+                        bottom:20
+                    }
+                },
+                sclaes:{
+                    xAxes: [{
+                        gridLines:{
+                            color:"rgba(0, 152,24, 0.1)"
+                        }
+                    }],
+                    yAxes: [{
+                        gridLines:{
+                            color:"rgba(0, 152,24, 0.1)"
+                        }
+                    }],
+                }
+            }
+        });
+
+        var myChart4 = new Chart(ctx4, {
+            type:'line',
+            data: {
+                labels: ['JUL', 'AGO', 'SEP','OCT', 'NOV', 'DIC'],
+                datasets:[{
+                    labels: 'los votos',
+                    data: [42, 39, 33, 46, 47, 25],
+                    backgroundColor: [
+                        'transparent'
+                    ],
+                    borderColor: [
+                        '#00f2c3',
+                        '#00f2c3',
+                        '#00f2c3',
+                        '#00f2c3',
+                        '#00f2c3',
+                        '#00f2c3'
+                    ],
+                    borderWidth: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                legend: {display: false},
+                tooltips: {
+                    backgroundColor: '#fff',
+                    titleFontColor: '#4c4c4c',
+                    bodyFontColor: '#4c4c4c',
+                    enabled: true,
+                    modo: 'single',
+                    multiKeyBackroundColor: '#e1548f'
+                },
+                layout:{
+                    padding:{
+                        left:0,
+                        top:0,
+                        rigth:0,
+                        bottom:20
+                    }
+                },
+                sclaes:{
+                    xAxes: [{
+                        gridLines:{
+                            color:"rgba(0, 242,195, 0.1)"
+                        }
+                    }],
+                    yAxes: [{
+                        gridLines:{
+                            color:"rgba(0, 242,195, 0.1)"
+                        }
+                    }],
+                }
+            }
+        });
+    </script>
 </body>
 </html>

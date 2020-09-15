@@ -39,9 +39,214 @@ nav
     width: 100%;
 }
 
+.card
+{
+    background: #27293d;
+    border-radius: 5px;
+    box-shadow: 0 1px 20px 0 rgba(0,0,0, 0.1);
+    padding: 10px;
+}
+
+.card-chart
+{
+    height: auto;
+    overflow: hidden;
+}
+
 .content
 {
     padding: 80px 30px 30px 280px;
+}
+
+.footer-card
+{
+    padding: 10px 0px 5px 10px;
+}
+
+.footer-card i
+{
+    color: #a8a8a8;
+}
+
+.footer-card span
+{
+    color: #a8a8a8;
+    font-family: "Poppins";
+    font-size: 13px;
+    font-weight: 300;
+    margin-left: 10px;
+}
+
+.grid-row
+{
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.grid-row_4
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+}
+
+.grid-row_charts
+{
+    column-gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 20px;
+}
+
+.header-card
+{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.header-card span
+{
+    color: #fff;
+    display: flex;
+    font-family: "Poppins";
+    justify-content: flex-end;
+    font-size: 10px;
+}
+
+.header-card h6
+{
+    color: #fff;
+    display: flex;
+    font-family: "Poppins";
+    font-size: 20px;
+    justify-content: flex-end;
+}
+
+.header-card::after
+{
+    background: rgba(29, 113, 182, 0.1);
+    bottom:0;
+    content: "";
+    height: 1px;
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;
+}
+
+.header-card_chart
+{
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.header-card_chart span
+{
+    color: #a8a8a8;
+    font-family: "Poppins";
+    font-size: 16px;
+}
+
+.header-card_chart h6
+{
+    color: #a8a8a8;
+    font-family: "Poppins";
+    font-size: 16px;
+}
+
+.icon
+{
+    height: 50px;
+    width: 50px;
+}
+
+.icon .fa-comments
+{
+    background: #ff8d72;
+    background-image: linear-gradient(to bottom left, #ff8d72, #ff6491, #ff8d72);
+    background-position: 100% 0;
+    background-size: 210% 210%;
+    border-radius: 50%;
+    color: #fff;
+    padding: 12px 14px;
+}
+
+.icon .fa-hourglass
+{
+    background: #fd5d93;
+    background-image: linear-gradient(to bottom left, #fd5d93, #ec250d, #fd5d93);
+    background-position: 100% 0;
+    background-size: 210% 210%;
+    border-radius: 50%;
+    color: #fff;
+    padding: 12px 14px;
+}
+
+.icon .fa-user
+{
+    background: #00f2c3;
+    background-image: linear-gradient(to bottom left, #00f2c3, #0098f0, #00f2c3);
+    background-position: 100% 0;
+    background-size: 210% 210%;
+    border-radius: 50%;
+    color: #fff;
+    padding: 12px 14px;
+}
+
+.icon .fa-star
+{
+    background: #e14eca;
+    background-image: linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca);
+    background-position: 100% 0;
+    background-size: 210% 210%;
+    border-radius: 50%;
+    color: #fff;
+    padding: 12px 14px;
+}
+
+.logo
+{
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    position: relative;
+}
+
+.logo::after
+{
+    background: #fff;
+    bottom: 0;
+    content: '';
+    display: flex;
+    height: 1px;
+    justify-content: center;
+    left:12px;
+    position: absolute;
+    width: 90%;
+}
+
+.logo img
+{
+    margin-left: 22px;
+    width: 35px;
+}
+
+.logo span
+{
+    color: #fff;
+    display: block;
+    font-family: "Poppins";
+    font-size: 13px;
+    font-weight: 300;
+    margin-left: 10px;
+    overflow: hidden;
+    text-transform: uppercase;
+    transition: .5s;
+    white-space: nowrap;
 }
 
 .main-panel
@@ -51,6 +256,42 @@ nav
     min-height: 100vh;
     transition: .2s;
     width: 100%;
+}
+
+.nav ul
+{
+    list-style: none;
+    margin-top: 20px;
+}
+
+.nav ul li
+{
+    padding: 30px;
+}
+
+.nav ul li a
+{
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+}
+
+.nav ul li a i
+{
+    color: #fff;
+    font-size: 20px;
+    width: 37px;
+}
+
+.nav ul li a span
+{
+    color:#fff;
+    display: block;
+    font-family: "Poppins";
+    font-size: 12px;
+    font-weight: 300;
+    transition: .5s;
+    text-transform: uppercase;
 }
 
 .navbar-bar
@@ -115,6 +356,19 @@ nav
     position: fixed;
     width: 230px;
     z-index: 1024;
+}
+
+.sidebar::after
+{
+    border: 5px solid #97174d;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid transparent;
+    content: '';
+    left: 40px;
+    position: absolute;
+    transform: translate(-50%);
+    top: -10px;
 }
 
 .wrapper
